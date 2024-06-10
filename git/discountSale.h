@@ -1,8 +1,15 @@
-//
-//  1.cpp
-//  git
-//
-//  Created by Jiyun Shin on 2024/06/10.
-//
+#pragma once
+#include "sale.h"
 
-#include "1.hpp"
+class discountSale : public sale
+{
+    double discount;
+public:
+    discountSale(double p = 0, double d = 0) : sale{p}, discount{d} {}
+    double getDiscount() const {return discount;}
+    void setDiscount(double n) {discount = n;}
+    virtual double bill() const override
+    {
+        return getPrice()*(1-discount/100);
+    }
+};
