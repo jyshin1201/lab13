@@ -1,8 +1,13 @@
-//
-//  2.cpp
-//  git
-//
-//  Created by Jiyun Shin on 2024/06/10.
-//
+#pragma once
+#include "pet.h"
 
-#include "2.hpp"
+class dog : public pet
+{
+public:
+    std::string breed{};
+    virtual void print() const
+    {
+        std::cout << "name: " << name << '\n';
+        std::cout << "breed: " << breed << '\n';
+    }
+};
