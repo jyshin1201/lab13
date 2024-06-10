@@ -1,13 +1,14 @@
-//
-//  2.hpp
-//  git
-//
-//  Created by Jiyun Shin on 2024/06/10.
-//
+#pragma once
+#include <iostream>
+#include <string>
 
-#ifndef __hpp
-#define __hpp
+class pet
+{
+public:
+    std::string name{};
+    virtual void print() const
+    {
+        std::cout << "name: " << name << '\n';
+    }
+};
 
-#include <stdio.h>
-
-#endif /* __hpp */
